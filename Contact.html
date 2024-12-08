@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Me</title>
+
+    <!-- Linking fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="Contact.css">
+
+</head>
+
+<body>
+    <main class="container">
+
+        <section class="faq-image-section" aria-labelledby="faq-heading">
+            <!-- FAQ Section -->
+            <section class="faq-container">
+                <h1 id="faq-heading" class="faq-heading">FAQ</h1>
+
+                <!-- FAQ items -->
+                <section class="faq-item">
+                    <details>
+                        <summary class="faq-question">What's the Best Way to Contact Me?</summary>
+                        <p class="faq-answer">The best way to contact me is via Email!</p>
+                    </details>
+                </section>
+
+                <section class="faq-item">
+                    <details>
+                        <summary class="faq-question">Who is in the Picture?</summary>
+                        <p class="faq-answer">
+                            The picture is of me and my siblings during my 8th grade graduation. This is
+                            one of my favorite pictures as it was during a time all my siblings and I lived together.
+                        </p>
+                    </details>
+                </section>
+
+                <section class="faq-item">
+                    <details>
+                        <summary class="faq-question">How Long Does it Take to get a Response?</summary>
+                        <p class="faq-answer">I respond pretty quickly, so don't worry :)</p>
+                    </details>
+                </section>
+            </section>
+
+            <!-- Image Section -->
+            <figure class="faq-image">
+                <img src="Siblings.jpg" alt="A family photo of me and my siblings at my 8th grade graduation." />
+            </figure>
+        </section>
+
+
+
+        <!-- Contact form section -->
+        <section class="contact-section" aria-labelledby="contact-heading">
+            <h2 id="contact-heading" class="contact-heading">Contact Me!</h2>
+
+            <!-- Accessible form for users with disabilities -->
+            <form class="contact-form" aria-describedby="contact-description">
+                <p id="contact-description" class="visually-hidden">
+                    Please fill out the form below to contact me. Fields marked as required must be completed.
+                </p>
+
+                <!-- Name fields -->
+                <fieldset>
+                    <legend class="form-legend">Your Name</legend>
+                    <!-- Replaced divs with semantic grouping -->
+                    <section class="form-row">
+                        <!-- First Name -->
+                        <article class="form-group">
+                            <label for="first-name" class="form-label">First Name</label>
+                            <input type="text" id="first-name" name="first-name" class="form-input" required>
+                        </article>
+                        <!-- Last Name -->
+                        <article class="form-group">
+                            <label for="last-name" class="form-label">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" class="form-input" required>
+                        </article>
+                    </section>
+                </fieldset>
+
+                <!-- Contact information fields -->
+                <fieldset>
+                    <legend class="form-legend">Contact Information</legend>
+                    <!-- Email input with accessible attributes -->
+                    <section class="form-group">
+                        <label for="email" class="form-label">Email <span class="required">(required)</span></label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </section>
+
+                    <!-- Phone input for optional contact -->
+                    <section class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </section>
+                </fieldset>
+
+                <!-- Submit button -->
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

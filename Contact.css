@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Parkinsans', sans-serif;
+    background-color: #241a10;
+    color: white;
+    line-height: 1.5;
+    padding-top: 50px;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.faq-image-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+
+.faq-container {
+    flex: 1;
+    max-width: 60%;
+    font-family: 'Newsreader';
+}
+
+
+.faq-heading {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: left;
+    font-family: 'Tinos';
+    font-weight: normal;
+}
+
+
+.faq-item {
+    border: 3px solid #fff;
+    border-radius: 8px;
+    background-color: #241a10;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+
+.faq-question {
+    font-size: 1.8rem;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.faq-question::after {
+    content: "+";
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.3s, content 0.3s;
+}
+
+
+details[open] .faq-question::after {
+    content: "-";
+    transform: rotate(90deg);
+}
+
+
+.faq-answer {
+    padding: 15px 20px;
+    background-color: #241a10;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+
+/* Dropdown Animation Effect */
+details[open] .faq-answer {
+    animation: fadeIn 0.5s ease-in;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.faq-image {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+
+.faq-image img {
+    width: 100%;
+    border-radius: 70px;
+    padding-top: 40px;
+}
+
+
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 70px 130px; 
+    background-color: #7B692C;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    max-width: 1200px;
+    min-height: 400px; 
+}
+
+
+.contact-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+    font-family: 'Newsreader';
+    font-weight: normal;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+/* Styling for fieldsets and legends */
+fieldset {
+    border: 3px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #7B692C;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f5d742;
+    padding: 0 10px;
+}
+
+
+
+/* Form row styling */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+
+.form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+
+.required {
+    font-size: 0.9rem;
+    color: #f5d742;
+    font-weight: normal;
+}
+
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #241a10;
+    color: white;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+    outline: none;
+    margin-bottom: 30px;
+}
+
+
+.submit-btn {
+    padding: 12px 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+.submit-btn:hover {
+    background-color: #2a1d0f;
+    transform: scale(1.02);
+}
+
+
+@media (max-width: 768px) {
+    .faq-image-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq-container {
+        max-width: 100%;
+    }
+
+    .faq-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
