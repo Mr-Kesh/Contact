@@ -5,6 +5,11 @@
 }
 
 
+.hidden {
+    display: none;
+}
+
+
 body {
     font-family: 'Parkinsans', sans-serif;
     background-color: #241a10;
@@ -204,7 +209,7 @@ legend {
 
 .required {
     font-size: 0.9rem;
-    color: #f5d742;
+    color: red;
     font-weight: normal;
 }
 
